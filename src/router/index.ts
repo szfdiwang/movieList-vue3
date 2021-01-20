@@ -13,6 +13,18 @@ const routes = [
         component: () => import('@/views/Home/Home.vue')
       }
     ]
+  },
+  {
+    path: '/movie',
+    name: 'Movie',
+    component: Layout,
+    children: [
+      {
+        path: '/movie/:id',
+        name: 'Detail',
+        component: () => import('@/views/Movie/Movie.vue')
+      }
+    ]
   }
 ]
 const router = createRouter({
