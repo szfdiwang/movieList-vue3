@@ -47,7 +47,7 @@ export default defineComponent({
       {
         id: '2',
         name: '分类',
-        route: 'Class'
+        route: 'Type'
       },
       {
         id: '3',

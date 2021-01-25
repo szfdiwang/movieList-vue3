@@ -25,6 +25,39 @@ const routes = [
         component: () => import('@/views/Movie/Movie.vue')
       }
     ]
+  },
+  {
+    path: '/type',
+    component: Layout,
+    children: [
+      {
+        path: '/type',
+        name: 'Type',
+        component: () => import('@/views/Type/Type.vue')
+      }
+    ]
+  },
+  {
+    path: '/rank',
+    component: Layout,
+    children: [
+      {
+        path: '/rank',
+        name: 'Rank',
+        component: () => import('@/views/Rank/Rank.vue')
+      }
+    ]
+  },
+  {
+    path: '/search',
+    component: Layout,
+    children: [
+      {
+        path: '/search',
+        name: 'Search',
+        component: () => import('@/views/Search/Search.vue')
+      }
+    ]
   }
 ]
 const router = createRouter({

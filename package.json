@@ -10,12 +10,15 @@
   "dependencies": {
     "axios": "^0.21.1",
     "better-scroll": "^2.1.1",
+    "dplayer": "^1.26.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.3",
+    "vue3-lazy": "^1.0.0-alpha.1",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@types/dplayer": "^1.25.1",
     "@typescript-eslint/parser": "^2.33.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-typescript": "~4.5.0",

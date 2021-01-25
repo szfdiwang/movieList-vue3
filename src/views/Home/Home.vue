@@ -8,12 +8,7 @@
 <script lang="ts">
 import Card from '@/components/global/Card.vue'
 import { defineComponent, reactive, computed } from 'vue'
-
-interface Movie {
-  id: string
-  name: string
-  score: string
-}
+import { Movie, MovieList } from '@/types/movie'
 
 export default defineComponent({
   components: { Card },
@@ -26,7 +21,7 @@ export default defineComponent({
     const computedScore = (): string => {
       return Math.floor(Math.random() * 10) + '.' + Math.floor(Math.random() * 10)
     }
-    const movieList = reactive({
+    const movieList: MovieList<Movie> = reactive({
       title: '正在热映',
       list: [
         { id: '001', name: '最终列车', score: computedScore() },
