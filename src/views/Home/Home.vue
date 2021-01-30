@@ -7,9 +7,9 @@
 </template>
 <script lang="ts">
 import Card from '@/components/global/Card.vue'
-import { defineComponent, reactive, computed } from 'vue'
+import { defineComponent, reactive, computed, onMounted } from 'vue'
 import { Movie, MovieList } from '@/types/movie'
-
+import api from '@/api'
 export default defineComponent({
   components: { Card },
   name: 'Home',
@@ -48,6 +48,15 @@ export default defineComponent({
         { id: '018', name: '伸冤人', score: computedScore() },
         { id: '019', name: '黄海', score: computedScore() }
       ]
+    })
+
+    onMounted(() => {
+      console.log('1111')
+
+      api.queryMovieByPage({ curPage: 1, pageSize: 10 }).then(res => {
+        console.log(res)
+        movieList.list = res.data
+      })
     })
 
     return {
